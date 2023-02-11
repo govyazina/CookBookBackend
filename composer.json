@@ -4,7 +4,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
+        "php": "^8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "symfony/console": "6.2.*",
@@ -15,6 +15,9 @@
         "symfony/yaml": "6.2.*"
     },
     "require-dev": {
+        "phpstan/phpstan": "^1.9",
+        "phpunit/phpunit": "^10.0",
+        "roave/security-advisories": "dev-latest"
     },
     "config": {
         "allow-plugins": {
@@ -53,6 +56,12 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "stan": "vendor/bin/phpstan",
+        "test": "vendor/bin/phpunit",
+        "checks": [
+            "@stan",
+            "@test"
         ]
     },
     "conflict": {
