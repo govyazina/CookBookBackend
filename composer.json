@@ -1,5 +1,7 @@
 {
     "type": "project",
+    "name": "govyazina/cook-book-backend",
+    "description": "Cook Book",
     "license": "proprietary",
     "minimum-stability": "stable",
     "prefer-stable": true,
