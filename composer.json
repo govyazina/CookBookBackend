@@ -17,6 +17,7 @@
         "symfony/yaml": "6.2.*"
     },
     "require-dev": {
+        "deployer/deployer": "^7.1",
         "phpstan/phpstan": "^1.9",
         "phpunit/phpunit": "^10.0",
         "roave/security-advisories": "dev-latest"

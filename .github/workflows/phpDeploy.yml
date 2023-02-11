@@ -1,10 +1,11 @@
-name: PHP build
+name: PHP Deploy
+
+concurrency: production
 
 on:
     push:
         branches: [ "main" ]
-    pull_request:
-        branches: [ "main" ]
+    workflow_dispatch:
 
 permissions:
     contents: read
@@ -40,3 +41,9 @@ jobs:
 
             -   name: Run test suite
                 run: composer run-script test
+
+            -   name: Deploy
+                uses: deployphp/action@v1
+                with:
+                    dep: deploy
+                    private-key: ${{ secrets.PRIVATE_KEY }}
