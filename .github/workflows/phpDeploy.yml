@@ -13,6 +13,7 @@ permissions:
 jobs:
     build:
         runs-on: ubuntu-20.04
+        environment: production
         steps:
             # see https://github.com/shivammathur/setup-php
             -   uses: shivammathur/setup-php@v2
