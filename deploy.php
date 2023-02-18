@@ -18,7 +18,7 @@ add('writable_dirs', []);
 // PHP-FPM
 desc('PHP-FPM restart');
 task('fpm:restart', function () {
-    run('systemctl restart php8.2-fpm');
+    run('sudo systemctl restart php8.2-fpm');
 });
 
 // Hosts
